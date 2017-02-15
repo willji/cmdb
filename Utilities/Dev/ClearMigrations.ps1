@@ -1,0 +1,1 @@
+Get-ChildItem -Path ..\..\ -Recurse -Filter "Migrations" | ?{ $_.Mode.StartsWith("d") } | ?{$_.PSPath -notlike "*env*"}  | Remove-Item -Recurse -Force -Verbose
